@@ -1,0 +1,105 @@
+/* Layout och struktur  */
+body {
+  padding-top: 70px;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Navigationsmeny */
+nav {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+nav h2 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #fff !important;
+  border-bottom: 2px solid #fff;
+}
+
+/*  Bilder  */
+img {
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
+
+/*  Karusell  */
+.carousel-inner {
+  min-height: 400px;
+}
+
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/*  Animationer  */
+.fade-in-text {
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+}
+
+.fade-zoom-image,
+.animated-image {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeZoomIn 1s ease-out forwards;
+}
+
+.fade-delay-1 {
+  animation-delay: 0.2s;
+}
+
+.fade-delay-2 {
+  animation-delay: 0.4s;
+}
+
+.fade-delay-3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeZoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
