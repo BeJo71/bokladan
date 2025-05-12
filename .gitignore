@@ -36,3 +36,6 @@ dist-ssr/
 
 # --
 .vs/
+*.db-shm
+*.db-wal
+*.db-journal
