@@ -5,7 +5,7 @@ using UserAPI.Models;
 using System.Security.Claims;
 
 //Controller för att hantera själva användarkontot, som registrering, redigering och borttagning
-// Hjälp av microsofts dokumentation och chatgpt vid felsökning av kod 
+
 
 namespace UserAPI.Controllers
 {
