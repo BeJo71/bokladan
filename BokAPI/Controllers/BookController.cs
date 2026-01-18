@@ -19,7 +19,7 @@ namespace BokAPI.Controllers
         }
 
         // Hjälpmetod för att hämta UserId och logga ut vad som finns
-        // Hjälp av chatgpt för att sätta upp det
+
         private string? GetUserId()
         {
             var nameId = User.FindFirstValue(ClaimTypes.NameIdentifier);
