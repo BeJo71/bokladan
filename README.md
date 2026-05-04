@@ -1,59 +1,40 @@
+# Bokladan – Fullstack Web Application
 
+Bokladan är en fullstack webbapplikation där användare kan söka efter böcker, spara dem i ett personligt bibliotek och hantera sitt konto.
 
-Funktioner
+## Funktioner
 
-Registrera & logga in
+- Registrera konto och logga in (JWT-baserad autentisering)
+- Söka bokinformation via OpenLibrary API
+- Spara böcker till ett personligt bibliotek
+- Redigera och ta bort sparade böcker
+- Hantera profil (ändra lösenord, uppdatera uppgifter, radera konto)
 
-Sök bokinformation via OpenLibrary
+## Tekniker som används
 
-Spara böcker till ditt bibliotek
+- Frontend: React + React Router
+- Backend: .NET 8 (ASP.NET Web API)
+- Databas: SQLite (Entity Framework Core)
+- Styling: Bootstrap 5
+- Autentisering: JWT
 
-Redigera och ta bort böcker du sparat
+## Säkerhet och autentisering
 
-Redigera profil, byta lösenord, radera konto
-Kom igång lokalt
+Projektet använder ASP.NET Identity för användarhantering och JWT för autentisering. Lösenord hanteras via Identity och sparas inte manuellt i klartext.
 
-1. Klona detta repo
+Detta är ett utbildningsprojekt och inte en produktionssatt applikation. Vid vidareutveckling skulle jag exempelvis lägga till refresh tokens, förbättrad felhantering, e-postverifiering och mer omfattande validering.
 
+## Projektstruktur
+
+Projektet består av tre delar:
+
+- **Frontend** (React)
+- **UserAPI** – hantering av användare och autentisering
+- **BookAPI** – hantering av användarens bokbibliotek
+
+## Kom igång lokalt
+
+### 1. Klona repot
+
+```bash
 git clone https://github.com/BeJo71/bokladan.git
-
-2. Starta API-projekten
-
-Projektet använder två backend-API:n:
-
-UserAPI (användarhantering och auth)
-
-BookAPI (bokbibliotek per användare)
-
-Navigera till respektive mapp och kör:
-
-dotnet run
-
-Båda använder SQLite som databas.
-
-3. Starta frontend
-
-Gå till React-projektmappen och kör:
-
-npm install
-npm run dev
-
-Frontend lyssnar vanligtvis på http://localhost:5173.
-
-Obs! Backend måste vara igång för att inloggning och biblioteket ska fungera korrekt.
-
-Tekniker som används
-
-React + React Router
-
-.NET 8 (ASP.NET Web API)
-
-SQLite via Entity Framework Core
-
-Bootstrap 5 (responsiv layout och komponenter)
-
-JWT (autentisering)
-
-Kontakta mig
-
-För frågor, mejla: beeajohansson@hotmail.se
